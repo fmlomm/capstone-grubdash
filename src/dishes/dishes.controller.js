@@ -40,7 +40,7 @@ function validateDishBody(req, res, next) {
     else if (price <= 0 || !Number.isInteger(price))
         message = "Dish must have a price that is an integer greater than 0";
     else if (!image_url || image_url === "")
-        message - "Dish must include an image_url";
+        message = "Dish must include an image_url";
 
     if (message) {
         return next({
