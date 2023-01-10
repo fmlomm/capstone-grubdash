@@ -13,7 +13,7 @@ function listDishes(req, res) {
     res.json({ data: dishes });
 }
 // creates dished using required items
-function createDishes(req, res) {
+function createDish(req, res) {
     const { data: { name, description, price, image_url } = {} } = req.body;
     const newDish = {
         id: nextId(),
